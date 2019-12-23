@@ -21,4 +21,8 @@ class NewsCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var fireLabel: UILabel! 
+    @IBOutlet weak var titleLabel: UILabel!
 }

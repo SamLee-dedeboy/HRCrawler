@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GV5-lO-K5r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14868"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,13 +15,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" id="XHe-YX-Y5Q" customClass="NewsCell" customModule="HRCrawler" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newsCell" id="XHe-YX-Y5Q" customClass="NewsCell" customModule="HRCrawler" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XHe-YX-Y5Q" id="Zkh-zF-9Cj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="382.5" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-12-06" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynv-qF-viL">
+                                            <rect key="frame" x="280" y="11" width="100" height="21.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="7hL-na-l1b"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVl-fx-6Ri">
+                                            <rect key="frame" x="5" y="5" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="CHt-6M-9mX"/>
+                                                <constraint firstAttribute="width" constant="35" id="TgP-v3-gUV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-BJ-FyU">
+                                            <rect key="frame" x="40" y="5" width="240" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="Iwu-ac-eO2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ynv-qF-viL" firstAttribute="top" secondItem="Zkh-zF-9Cj" secondAttribute="top" constant="11" id="9Wk-jP-vTH"/>
+                                        <constraint firstAttribute="trailing" secondItem="ynv-qF-viL" secondAttribute="trailing" constant="2.5" id="Ke2-19-QOJ"/>
+                                        <constraint firstItem="VVl-fx-6Ri" firstAttribute="leading" secondItem="Zkh-zF-9Cj" secondAttribute="leading" constant="5" id="Ktd-YZ-6wP"/>
+                                        <constraint firstItem="sAd-BJ-FyU" firstAttribute="leading" secondItem="VVl-fx-6Ri" secondAttribute="trailing" id="Pp5-kF-RHH"/>
+                                        <constraint firstAttribute="bottom" secondItem="ynv-qF-viL" secondAttribute="bottom" constant="11.5" id="TYc-Rk-sKu"/>
+                                        <constraint firstItem="ynv-qF-viL" firstAttribute="leading" secondItem="sAd-BJ-FyU" secondAttribute="trailing" id="pF9-Mt-kBE"/>
+                                        <constraint firstItem="sAd-BJ-FyU" firstAttribute="top" secondItem="Zkh-zF-9Cj" secondAttribute="top" constant="5" id="uHI-Kt-MkC"/>
+                                        <constraint firstItem="VVl-fx-6Ri" firstAttribute="top" secondItem="Zkh-zF-9Cj" secondAttribute="top" constant="5" id="y0P-26-yni"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="ynv-qF-viL" id="AgX-xL-2Qy"/>
+                                    <outlet property="fireLabel" destination="VVl-fx-6Ri" id="hsj-qQ-Dpc"/>
+                                    <outlet property="titleLabel" destination="sAd-BJ-FyU" id="uYI-Vp-3Ej"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,7 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCl-Mc-0DQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548" y="84"/>
+            <point key="canvasLocation" x="-549.27536231884062" y="83.705357142857139"/>
         </scene>
     </scenes>
 </document>

@@ -11,6 +11,7 @@ import SwiftSoup
 class HRViewController: UITableViewController, URLSessionDelegate {
     var htmlDocument:Document?
     var pageInfo = PageInfo()
+    var header = ["人事通知","人事新闻", "公示公告","招聘信息"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -95,7 +96,11 @@ extension HRViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
-
+   
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection
+                                section: Int) -> String? {
+       return header[section]
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pageInfo.getSectionRowCount(section)
     }
@@ -107,7 +112,11 @@ extension HRViewController {
         // Configure the cell...
         if let cell = cell as? NewsCell {
             cell.record = pageInfo.getRecord(indexPath.section, indexPath.row)
-            cell.textLabel?.text = cell.record!.title
+            cell.titleLabel.text = cell.record!.title
+            cell.dateLabel.text = cell.record!.date
+            if let readNum = Int(cell.record!.readNum),readNum > 1000 {
+                cell.fireLabel.text = "🔥"
+            }
 
         }
         return cell

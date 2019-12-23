@@ -16,6 +16,7 @@
 		224DA98323B066A600E1B72A /* PageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DA98223B066A600E1B72A /* PageInfo.swift */; };
 		224DA98523B066B900E1B72A /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DA98423B066B900E1B72A /* Record.swift */; };
 		224DA98723B0734700E1B72A /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DA98623B0734700E1B72A /* NewsCell.swift */; };
+		224DA98923B07D8C00E1B72A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224DA98823B07D8C00E1B72A /* DetailViewController.swift */; };
 		37DE76DD26E186195F5A5C2A /* Pods_HRCrawler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305AAB2551DDE997230CD4D9 /* Pods_HRCrawler.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		224DA98223B066A600E1B72A /* PageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfo.swift; sourceTree = "<group>"; };
 		224DA98423B066B900E1B72A /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		224DA98623B0734700E1B72A /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		224DA98823B07D8C00E1B72A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		305AAB2551DDE997230CD4D9 /* Pods_HRCrawler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HRCrawler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9CC91C8263367670314476 /* Pods-HRCrawler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRCrawler.debug.xcconfig"; path = "Target Support Files/Pods-HRCrawler/Pods-HRCrawler.debug.xcconfig"; sourceTree = "<group>"; };
 		9DB448E62485D643DE4E47A5 /* Pods-HRCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRCrawler.release.xcconfig"; path = "Target Support Files/Pods-HRCrawler/Pods-HRCrawler.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				224DA98223B066A600E1B72A /* PageInfo.swift */,
 				224DA98423B066B900E1B72A /* Record.swift */,
 				224DA98623B0734700E1B72A /* NewsCell.swift */,
+				224DA98823B07D8C00E1B72A /* DetailViewController.swift */,
 			);
 			path = HRCrawler;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				224DA98323B066A600E1B72A /* PageInfo.swift in Sources */,
 				224DA98723B0734700E1B72A /* NewsCell.swift in Sources */,
 				224DA97123B05B8B00E1B72A /* SceneDelegate.swift in Sources */,
+				224DA98923B07D8C00E1B72A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
