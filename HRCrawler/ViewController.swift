@@ -63,12 +63,16 @@ class HRViewController: UITableViewController, URLSessionDelegate {
                     //print(titles)
                     let dateElements = try section.getElementsByClass("news_meta")
                     let readNumElements = try section.getElementsByClass("news_meta1")
+                    
                     var titles = [String]()
                     var dates = [String]()
                     var readNums = [String]()
+                    var urls = [String]()
                     for titleElement in  titleElements {
                         var title = try titleElement.child(0).attr("title")
+                        var url = try titleElement.child(0).attr("href")
                         titles.append(title)
+                        urls.append(url)
                     }
                     for dateElement in dateElements {
                         dates.append(try dateElement.text())
@@ -76,7 +80,8 @@ class HRViewController: UITableViewController, URLSessionDelegate {
                     for readNumElement in readNumElements {
                         readNums.append(try readNumElement.text())
                     }
-                    pageInfo.addSection(titles,dates,readNums, to:index)
+                    
+                    pageInfo.addSection(titles,dates,readNums,urls, to:index)
                     index += 1
                     //pageInfo.addRecord(recordText, toSection:pageInfo.hrNotifications)
                 }
@@ -120,5 +125,13 @@ extension HRViewController {
 
         }
         return cell
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show News Detail" {
+            if let selectedNews = sender as? NewsCell,
+                let dvc = segue.destination as? DetailViewController {
+                dvc.url = selectedNews.record?.url!
+            }
+        }
     }
 }

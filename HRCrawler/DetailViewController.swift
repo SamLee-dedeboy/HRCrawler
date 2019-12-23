@@ -12,7 +12,7 @@ import WebKit
 class DetailViewController: UIViewController, WKUIDelegate {
 
     var url :URL?
-    var webView: WKWebView!
+    @IBOutlet weak var webView: WKWebView!
     
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
@@ -23,8 +23,8 @@ class DetailViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myURL = URL(string:"https://www.apple.com")
-        let myRequest = URLRequest(url: myURL!)
+        print("loading from \(url!)")
+        let myRequest = URLRequest(url: url!)
         webView.load(myRequest)
     }
     /*

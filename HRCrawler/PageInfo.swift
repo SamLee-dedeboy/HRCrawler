@@ -13,18 +13,18 @@ class PageInfo {
     var hrNews = [Record]()
     var announcements = [Record]()
     var jobInfo = [Record]()
-    
+    var urls = [String]()
     func addRecord(_ record:String, toSection section:[Record]) {
         var splitRecord = record.split(separator: " ")
         print(splitRecord)
     }
-    func addSection(_ titles:[String], _ dates:[String], _ nums:[String], to section:Int) {
+    func addSection(_ titles:[String], _ dates:[String], _ nums:[String],_ urls:[String], to section:Int) {
         for index in 0..<titles.count {
             switch section {
-            case 0: hrNotifications.append(Record(titles[index],dates[index],nums[index]))
-            case 1: hrNews.append(Record(titles[index],dates[index],nums[index]))
-            case 2: announcements.append(Record(titles[index],dates[index],nums[index]))
-            case 3: jobInfo.append(Record(titles[index],dates[index],nums[index]))
+            case 0: hrNotifications.append(Record(titles[index],dates[index],nums[index], urls[index]))
+            case 1: hrNews.append(Record(titles[index],dates[index],nums[index],urls[index]))
+            case 2: announcements.append(Record(titles[index],dates[index],nums[index],urls[index]))
+            case 3: jobInfo.append(Record(titles[index],dates[index],nums[index],urls[index]))
             default:break
             }
         }
